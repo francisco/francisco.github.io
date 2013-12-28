@@ -9,6 +9,7 @@
 		<meta name="keywords" content="website template, layout, css3, transition, effect, split, dual, two sides, portfolio" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
@@ -17,94 +18,83 @@
 		<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div class="container">
-			<div id="splitlayout" class="splitlayout">
-				<div class="intro">
-					<div class="side side-left">
-						<div class="intro-content">
-							<div class="profile"><img src="img/profile1.jpg" alt="Francisco Alberini"></div>
-							<h1><span>Francisco Alberini</span><span>About me</span></h1>
-						</div>
-						<div class="overlay"></div>
+		<div id="splitlayout" class="splitlayout">
+			<div class="intro">
+				<div class="side side-left">
+					<div class="intro-content">
+						<div class="profile"><img src="img/profile1.jpg" alt="Francisco Alberini"></div>
+						<h1><span>Francisco Alberini</span><span>About me</span></h1>
 					</div>
-					<div class="side side-right">
-						<div onclick="location.href='/blog';" class="intro-content">
-							<div class="profile" href="/blog"><img src='img/profile2.png'></div>
-							<h1><span>Developer's Lean </span><span>My Blog</span></h1>
-						</div>
-						<div class="overlay"></div>
+					<div class="overlay"></div>
+				</div>
+				<div class="side side-right">
+					<div onclick="location.href='/blog';" class="intro-content">
+						<div class="profile" href="/blog"><img src='img/profile2.png'></div>
+						<h1><span>Developer's Lean </span><span>My Blog</span></h1>
 					</div>
-				</div><!-- /intro -->
-				<div class="page page-right">
-					<div class="page-inner">
-						<section>
-							<h2>Hello.</h2>
-							<p>Scenario archetype complementary responsive script pixel sidebar sitemap keep it simple. Complementary visuals footer CSS from alan cooper delightful.  Photoshop iconography simplicity user experience affordance narrative ascenders contour.  Slab serif interstitial skeuomorphism illustrator design by committee simplicity alan cooper eye tracking.  Typography contrast mental model typesetting affordance narrative from CSS. Retina simplicity design by committee typography oblique.</p>
-							<p>Delightful ascenders contrast prototype. Ligature jakob nielsen user measure.  Ligature contrast glyph rule of thirds composition interstitial dribbble.  Mental model typography urbanized balance.  Resolution rounded corners IDEO constraints dribbble persona.  Portfolio sketch baseline 66-character line.  Usability testing mental model simplicity aspect ratio pencil type.  Usable sans-serif visualization leading prägnanz baseline pencil fireworks clarity omnigraffle.</p>
-						</section>
-						<section>
-							<h2>Constraints</h2>
-							<p>Card-sorting dropdown constraints alan cooper prägnanz iconography. Stakeholder balsamiq italic vector composition ethnography CSS monospace hierarchy. Eye tracking serif persona focus group.</p>
-							<p>Typesetting artifact rounded corners eye tracking braindump drawer menu mockup dropdown measure. Jony ive eye tracking script monospace heuristic tabs sketches. Affordance eye tracking scenario usable ligature typesetting clarity responsive. Information architecture golden ratio drawer menu header affordance aspect ratio. Balsamiq slab serif IDEO cognitive dissonance kerning pixel pixel-perfect. Pixel rounded corners header workflow portfolio.</p>
-							<p>Scenario navigation complementary jony ive helvetica archetype interstitial serif front-end. Constraints pencil usability gestalt design language mockup usability testing affordance jakob nielsen.</p>
-						</section>
-						<section>
-							<h2>Ligature</h2>
-							<p>Delightful ascenders contrast prototype. Ligature jakob nielsen user measure.  Ligature contrast glyph rule of thirds composition interstitial dribbble.  Mental model typography urbanized balance.  Resolution rounded corners IDEO constraints dribbble persona.  Portfolio sketch baseline 66-character line.  Usability testing mental model simplicity aspect ratio pencil type.  Usable sans-serif visualization leading prägnanz baseline pencil fireworks clarity omnigraffle.</p>
-							<p>Paper prototype urbanized headroom typography splash screen pencil modal branding. Retina omnigraffle objectified descender navigation adobe ethnography. Innovate design by committee modern hero message. Contrast user-centered color theory keep it simple visuals bevel adobe descender splash screen. From focus group accessibility sans-serif archetype pixel-perfect complementary skeuomorphism. Focus group iconography figure-ground navigation user-centered omnigraffle from.</p>
-						</section>
-						<section>
-							<h2>Ligature</h2>
-							<p>Delightful ascenders contrast prototype. Ligature jakob nielsen user measure.  Ligature contrast glyph rule of thirds composition interstitial dribbble.  Mental model typography urbanized balance.  Resolution rounded corners IDEO constraints dribbble persona.  Portfolio sketch baseline 66-character line.  Usability testing mental model simplicity aspect ratio pencil type.  Usable sans-serif visualization leading prägnanz baseline pencil fireworks clarity omnigraffle.</p>
-							<p>Paper prototype urbanized headroom typography splash screen pencil modal branding. Retina omnigraffle objectified descender navigation adobe ethnography. Innovate design by committee modern hero message. Contrast user-centered color theory keep it simple visuals bevel adobe descender splash screen. From focus group accessibility sans-serif archetype pixel-perfect complementary skeuomorphism. Focus group iconography figure-ground navigation user-centered omnigraffle from.</p>
-						</section>
-						<section>
-							<h2>Typesetting</h2>
-							<p>Typesetting artifact rounded corners eye tracking braindump drawer menu mockup dropdown measure. Jony ive eye tracking script monospace heuristic tabs sketches. Affordance eye tracking scenario usable ligature typesetting clarity responsive. Information architecture golden ratio drawer menu header affordance aspect ratio. Balsamiq slab serif IDEO cognitive dissonance kerning pixel pixel-perfect. Pixel rounded corners header workflow portfolio.</p>
-							<p>Fireworks mobile skeuomorphism sitemap. Workflow iconography interaction design pixel-perfect serif. Mental model monospace typeface behavior change bauhaus from usability testing. Color theory user experience paper prototype narrative palette serif gradient header. Oblique modal 66-character line sketch responsive portfolio. Comic sans fireworks prägnanz monospace gradient design language jakob nielsen. Figure-ground pixel aspect ratio sketches rounded corners jony ive constraints mental model splash screen.</p>
-							<p>Placeholder text by <a href="http://www.designeripsum.com/">Designer Ipsum</a>.</p>
-							<p>Profile images are licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">Creative Commons BY-NC-SA 2.0</a> license. The images are from Greg Peverill-Conti's <a href="http://www.flickr.com/photos/gregpc/">1,000 faces project</a>.</p>
-						</section>
-					</div><!-- /page-inner -->
-				</div><!-- /page-right -->
-				<div class="page page-left">
-					<div class="page-inner">
-						<section>
-							<h2>Welcome.</h2>
-							<p>I'm a full-stack web developer based in San Francisco, CA
-								<br />Before becoming a developer, I was a product manager and online marketer</p>
-						</section>
-						<section>
-							<h2>My work.</h2>
-							<ul id="og-grid" class="og-grid">
-								<li>
-									<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-									</a>
-									<img src="img/thumbs/1.jpg" alt="img01"/>
-									This is my first project:
-								</li>
-								<li>
-									<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-										<img src="img/thumbs/2.jpg" alt="img02"/>
-									</a>
-								</li>
-								<li>
-									<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-										<img src="img/thumbs/3.jpg" alt="img03"/>
-									</a>
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h2>Get in touch.</h2>
-							<p><div class="box">This is a box</div></p>
-						</section>
-					</div><!-- /page-inner -->
-				</div><!-- /page-left -->
-				<a href="#" class="back back-right" title="back to intro">&rarr;</a>
-				<a href="#" class="back back-left" title="back to intro">&larr;</a>
-			</div><!-- /splitlayout -->
-		</div><!-- /container -->
+					<div class="overlay"></div>
+				</div>
+			</div><!-- /intro -->
+			<div class="page page-left">
+				<div class="page-inner">
+					<section>
+						<h2>Welcome.</h2>
+						<p>I'm a full-stack web developer based in San Francisco, CA.
+							<br />Before becoming a developer, I was a product manager and online marketer.</p>
+					</section>
+					<section>
+						<h2>My projects.</h2>
+						<div class="row">
+						  <div class="col-sm-4 col-md-4">
+						    <div class="thumbnail">
+						      <img src="/img/learncode.png">
+						      <div class="caption">
+						        <h3>Learncode</h3>
+						        <div class="description">Interactive school map and online resources to help aspiring web developers learn to code
+						        </div>
+						        <ul>
+						        		<li><a href="https://github.com/francisco/codemapsalpha">Github Repo</a></li>
+						        		<li><a href="http://learncode.herokuapp.com/">Heroku Link</a></li>
+						        </ul>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="col-sm-4 col-md-4">
+						    <div class="thumbnail">
+						      <img src="/img/lederfeier.png">
+						      <div class="caption">
+						        <h3>Leder Feier</h3>
+						        <div class="description">Mobile-first web app that facilitates a gathering with engaging conversation prompts</div>
+					        	<ul>
+					        		<li><a href="https://github.com/francisco/bedazzledbaldachin">Github Repo</a></li>
+					        		<li><a href="http://leder-feier.herokuapp.com/">Heroku Link</a></li>
+					        	</ul>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="col-sm-4 col-md-4">
+						    <div class="thumbnail">
+						    	<img class="border" src="/img/agilefamily.png">
+						      <div class="caption">
+						        <h3>Agilefamily</h3>
+						        <div class="description">Tools to help families implement Agile methodology for task management and family meetings</div>
+					        	<ul>
+					        		<li><a href="https://github.com/francisco/agilefamily">Github Repo</a></li>
+					        		<li><a href="http://www.agilefamily.co/">Heroku Link</a></li>
+					        	</ul>
+						      </div>
+						    </div>
+						  </div>
+					  </div>
+					</section>
+					<section>
+						<h2>Get in touch.</h2>
+					</section>
+				</div><!-- /page-inner -->
+			</div><!-- /page-left -->
+			<a href="#" class="back back-right" title="back to intro">&rarr;</a>
+			<a href="#" class="back back-left" title="back to intro">&larr;</a>
+		</div><!-- /splitlayout -->
 		<script src="js/classie.js"></script>
 		<script src="js/cbpSplitLayout.js"></script>
 	</body>
