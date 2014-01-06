@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nokogiri | Developer's Lean]]></title>
+  <link href="http://francisco.github.io/blog/categories/nokogiri/atom.xml" rel="self"/>
+  <link href="http://francisco.github.io/"/>
+  <updated>2014-01-06T13:07:12-08:00</updated>
+  <id>http://francisco.github.io/</id>
+  <author>
+    <name><![CDATA[Francisco Alberini]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learncode: My First Project as a Web Developer]]></title>
+    <link href="http://francisco.github.io/blog/2013/11/10/learncode-my-first-project-as-a-web-developer/"/>
+    <updated>2013-11-10T17:52:46-08:00</updated>
+    <id>http://francisco.github.io/blog/2013/11/10/learncode-my-first-project-as-a-web-developer</id>
+    <content type="html"><![CDATA[<p>With four weeks of GA’s Web Development Immersive under my belt, it came time to embark on my first official Rails project. I knew I wanted to build something that leveraged a publicly accessible API and a map. Fortunately, I stumbled upon <a href="http://code.org">Code.org</a> and their awesome Local School Database API. After some brainstorming, I wanted <a href="http://learncode.herokuapp.com">Learncode</a> to achieve the following:
+&ndash; Inspire visitors to learn to code
+&ndash; Help those visitors find relevant self-study information
+&ndash; Display all the physical schools where one could learn to code</p>
+
+<p>For my MVP, I focused on implementing the following features:
+&ndash; Access Code.org&rsquo;s Local Schools Database
+&ndash; Install Leaflet maps
+&ndash; Add map markers using address-to-Lat/Long conversion with Google Maps
+&ndash; Embed school data in a map marker popup
+&ndash; Add search-by-address functionality to move the map to the entered address
+&ndash; Create an aesthetically pleasing UI</p>
+
+<p>I was able to move quickly with implementing many of the MVP features, but encountered a few challenges that required some creative problem solving and help from my instructors to overcome.</p>
+
+<h3>Challenge 1:</h3>
+
+<p>The Local Schools Database was temporarily down meaning I could not access the JSON schools data with a simple Ajax request.</p>
+
+<p><strong>Solution:</strong> Developed a Nokogiri rake task to scrape a data sample for a handful of cities as a proof of concept for the MVP. With the sample data in my database, I developed a second rake task to convert each school&rsquo;s address to lat/long and stored that in the Database. I later implemented the Rails Geocoder Gem for this.</p>
+
+<h3>Challenge 2:</h3>
+
+<p>Render the map-markers using Javascript to avoid routing the user to a new view after each search.</p>
+
+<p><strong>Solution:</strong> Implemented an Ajax request to pull in the markers from the Database and render them on the page. To do so, I created an API using a respond_to query in my Rails controller. I’ve included the ruby code snippet below.</p>
+
+<p><strong>Ruby on Rails Controller Index Function:</strong></p>
+
+<pre><code>#Select all offline schools from Database and assign to variable
+offline_schools = OfflineSchool.all
+
+#API to render data accesible via an AJAX request
+respond_to do |format|
+  format.html
+  format.json {
+    lat = params[:lat]
+    lng = params[:lng]
+    render json: OfflineSchool.near([lat, lng], 50, :order =&gt; :distance)
+  }
+end
+</code></pre>
+
+<p>After the MVP was complete, I spent time improving the front-end, while implementing a few more controllers and views with relevant content to inspire users to learn code and help them find self-study resources.</p>
+
+<p>Looking back, building my first real website from scratch was an incredibly rewarding experience. I challenged myself to learn new things while leveraging everything I had learned in the previous 4 weeks at General Assembly. But more importantly, I achieved a major life goal of mine (to build a web app on my own) and sparked what I know will be a life-long passion for web development.</p>
+
+<p>Here&rsquo;s a link to my <a href="http://learncode.herokuapp.com">Heroku deploy</a> and the <a href="https://github.com/francisco/codemapsalpha">Github Repo</a>. I&rsquo;ve also included some screenshots of Learncode. I plan to soon release some updates to resolve some of the JavaScript and CSS bugs.</p>
+
+<p><img src="/img/learncode_blog_screen.png" title="Learncode" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

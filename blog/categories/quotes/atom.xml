@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: quotes | Developer's Lean]]></title>
+  <link href="http://francisco.github.io/blog/categories/quotes/atom.xml" rel="self"/>
+  <link href="http://francisco.github.io/"/>
+  <updated>2014-01-06T13:07:12-08:00</updated>
+  <id>http://francisco.github.io/</id>
+  <author>
+    <name><![CDATA[Francisco Alberini]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Quotables: Linus Torvald on Open Source Projects]]></title>
+    <link href="http://francisco.github.io/blog/2014/01/02/quotables-linus-torvald-on-open-source-projects/"/>
+    <updated>2014-01-02T13:04:27-08:00</updated>
+    <id>http://francisco.github.io/blog/2014/01/02/quotables-linus-torvald-on-open-source-projects</id>
+    <content type="html"><![CDATA[<p>Some wise words from the man behind Linux excerpted from <a href="http://www.amazon.com/Dreaming-Code-Programmers-Transcendent-Software/dp/1400082471">Dreaming in Code by Scott Rosenberg</a>.</p>
+
+<blockquote><p>In June 2004, Linux Times published an interview with Linus Torvalds, Linux’s Benevolent Dictator.</p>
+
+<p>“Do you have any advice for people starting to undertake large open source projects?” the interviewer began.</p>
+
+<p>“Nobody should start to undertake a large project,” Torvalds snapped. “You start with a small trivial project, and you should never expect it to get large. If you do, you’ll just overdesign and generally think it is more important than it likely is at that stage. Or, worse, you might be scared away by the sheer size of the work you envision. So start small and think about the details. Don’t think about some big picture and fancy design. If it doesn’t solve some fairly immediate need, it’s almost certainly overdesigned.”</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

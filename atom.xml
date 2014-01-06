@@ -4,7 +4,7 @@
   <title><![CDATA[Developer's Lean]]></title>
   <link href="http://francisco.github.io/atom.xml" rel="self"/>
   <link href="http://francisco.github.io/"/>
-  <updated>2013-12-28T11:54:53-07:00</updated>
+  <updated>2014-01-06T13:07:12-08:00</updated>
   <id>http://francisco.github.io/</id>
   <author>
     <name><![CDATA[Francisco Alberini]]></name>
@@ -12,5 +12,165 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Quotables: Linus Torvald on Open Source Projects]]></title>
+    <link href="http://francisco.github.io/blog/2014/01/02/quotables-linus-torvald-on-open-source-projects/"/>
+    <updated>2014-01-02T13:04:27-08:00</updated>
+    <id>http://francisco.github.io/blog/2014/01/02/quotables-linus-torvald-on-open-source-projects</id>
+    <content type="html"><![CDATA[<p>Some wise words from the man behind Linux excerpted from <a href="http://www.amazon.com/Dreaming-Code-Programmers-Transcendent-Software/dp/1400082471">Dreaming in Code by Scott Rosenberg</a>.</p>
+
+<blockquote><p>In June 2004, Linux Times published an interview with Linus Torvalds, Linux’s Benevolent Dictator.</p>
+
+<p>“Do you have any advice for people starting to undertake large open source projects?” the interviewer began.</p>
+
+<p>“Nobody should start to undertake a large project,” Torvalds snapped. “You start with a small trivial project, and you should never expect it to get large. If you do, you’ll just overdesign and generally think it is more important than it likely is at that stage. Or, worse, you might be scared away by the sheer size of the work you envision. So start small and think about the details. Don’t think about some big picture and fancy design. If it doesn’t solve some fairly immediate need, it’s almost certainly overdesigned.”</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lederfeier: Making conversations happen]]></title>
+    <link href="http://francisco.github.io/blog/2013/12/11/lederfeier-making-conversations-happen/"/>
+    <updated>2013-12-11T12:44:38-08:00</updated>
+    <id>http://francisco.github.io/blog/2013/12/11/lederfeier-making-conversations-happen</id>
+    <content type="html"><![CDATA[<p>For our second Web Development Immersive project at GA, we were tasked with working with a group of fellow students to build a web app. The first challenge we faced was coming up with an idea. In preparation for that, we decided, as a group, to utilize <a href="http://en.wikipedia.org/wiki/Design_thinking">design thinking</a> to brainstorm project ideas, and then refine those ideas into something that we would all be proud of at the end of the 8 days allotted to building the app.</p>
+
+<p>The final idea was to build a social party app, which we later called <a href="http://leder-feier.herokuapp.com">Lederfeier</a> that provided fun prompts to people to spark real-life conversations. While seemingly ironic, we wanted to use smart phones to help people put down their smart phones and have a real conversation! The features were simple: a party planner would be able to create a party, select a prompt rating, and invite participants by entering their phone numbers. Participants could also join by texting a passphrase to a dedicated phone number. Once the party was officially started, all participants would receive a conversation prompt via text message, that they could pass or complete. See below for some prompt examples.</p>
+
+<h4>Prompt Examples:</h4>
+
+<ul>
+<li>Almonds. Discuss.</li>
+<li>If you could make something that&rsquo;s not socially acceptable, acceptable. What would it be?</li>
+<li>Describe the best meal you&rsquo;ve ever had</li>
+<li>Describe the characteristics of a perfect pair of socks</li>
+</ul>
+
+
+<p>Working in a group project was exciting as it allowed each of us to focus on certain parts of the project while learning from eachother&rsquo;s expertise. I&rsquo;ve included some thoughts on core aspects of the project below.</p>
+
+<h4>TDD:</h4>
+
+<p>To distribute text messages, we used Twilio. The integration was seamless and honestly a charm to put together. However, we quickly realized that testing all the potential participant responses and edge cases via a phone keyboard would be not only expensive (Twilio credits cost money), but VERY time consuming. Fortunately, we made the decision to leverage TDD to test all of the Twilio messages and responses. This decision turned out to be an incredible time saver, and it allowed us to confidently make changes to the app without fear of breaking things.</p>
+
+<h4>Mobile-First and AJAX requests:</h4>
+
+<p>To ensure that the user experience was easy to use from a smart phone, we spent a lot of time working on the UI and user flow. We made an effort to minimize user interaction by using ajax requests to refresh page data on a set interval. We also made the buttons big enough to click on from a mobile browser, and only rendered buttons when necessary using jQuery selectors.</p>
+
+<h4>Github: (<a href="https://github.com/sarlaf/bedazzledbaldachin">Lederfeier Repo</a>)</h4>
+
+<p>As familiar as we had become with Github during WDI for personal projects, working with Github in a multi-user team presented a new set of challenges. Following best practices, we created a central repo and each team member forked that repo to make changes. Once those changes were ready, a pull request was made and another team member reviewed and accepted the pull request. We quickly learned to rebase off the master on our local forks before sending the pull request to avoid serious version control issues!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Refinery Gem: Content Management in Rails]]></title>
+    <link href="http://francisco.github.io/blog/2013/12/03/refinery-gem-content-management-in-rails/"/>
+    <updated>2013-12-03T18:25:41-08:00</updated>
+    <id>http://francisco.github.io/blog/2013/12/03/refinery-gem-content-management-in-rails</id>
+    <content type="html"><![CDATA[<p>In my previous life I was a marketer and website manager. It&rsquo;s safe to say I spent A LOT of time building and updating site content in many different content management systems. Wordpress, Typepad, Drupal, Joomla and others all became good friends of mine, some more than others. Wordpress was always my favorite for many reasons. It&rsquo;s relatively easy to manage and update content, even for non-technical people. There’s a huge community of designers and developers who build templates for Wordpress implementations, not to mention countless plugins that make integrations fairly easy &ndash; although admittedly I’ve had plenty of problems with those WP plugins.</p>
+
+<p>As a newly minted developer however, my perception of a CMS has changed significantly. While Wordpress may be great for static content sites with minimal functionality, Wordpress can quickly reach its limitations when it’s asked to manage large data sets or perform complex functions.</p>
+
+<p>It was for these reasons that I was excited to learn about the open source <a href="http://refinerycms.com/">Refinery CMS gem for Ruby on Rails</a>. The platform incorporates the front-end ease of use of Wordpress with the powerful MVC backend of Rails, all bundled up (yes, I’m going there) in a developer friendly gem. In my opinion this makes for a winning combination. There is also a large community supporting Refinery which makes integrations a snap. In fact, here’s a list of some of the <a href="http://refinerycms.com/engines">Refinery engines</a>. And of course there’s the ability to scale a rails app quickly and efficiently, including data integrations, account management, secure payment processing and much more.</p>
+
+<p>A quick google search on Refinery will also brought up a long list of favorable reviews <a href="http://blog.flatironschool.com/post/54511602806/build-a-blog-based-site-with-refinerycms">(here’s one of many)</a> about Refinery. Other developers who have implemented the Refinery Content Management System claim that it’s fast, reliable and scalable, all wrapped in a easy to use novice-friendly UI. Did I also mention that Refinery is a completely open source project?</p>
+
+<p>All in all, <a href="http://refinerycms.com/">Refinery</a> is definitely a gem that I’ll consider the next time a CMS type project comes along. If you’re interested, go check out Refinery CMS for yourself.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Failure's Learning]]></title>
+    <link href="http://francisco.github.io/blog/2013/11/21/a-failures-learning/"/>
+    <updated>2013-11-21T18:14:23-08:00</updated>
+    <id>http://francisco.github.io/blog/2013/11/21/a-failures-learning</id>
+    <content type="html"><![CDATA[<p>As many smart people before me have said, failure is a necessary evil on the path to success. I personally could not agree more with that statement. I believe failure is absolutely necessary not only to help one learn and grow, but also to appreciate success. In much the same way that happiness can only be appreciated by those who have experienced sadness, success can only be appreciated by those who have failed.</p>
+
+<p>While looking for an article about failure, I came across many references to the &lsquo;failure rates&rsquo; of startups. While the number of unsuccessful startups is quite high, the successful ones often more than make up for it in the returns investors receive. In my research, I came across an interesting blog post, written anonymously, titled <a href="http://mystartuphas30daystolive.tumblr.com/post/53839497912/in-30-days-my-startup-will-be-be-dead">“My Startup has 30 Days to Live”</a>. The post describes a situation in which the founder finds his company in a spiral towards an inevitable failure with, you guessed it, only 30 days to live. The author reflects on the mistakes he made along the way, including building a team of people he loved, but people that couldn’t build a sustainable company, and joining an accelerator followed by rounds of VC funding. Interestingly the exercise seems very therapeutic and the author in the end realizes that he&rsquo;s happy he quit his job and decided to start a company. While the fear of not being able to pay his staff is certainly terrifying, he still manages to see the bright side of things.</p>
+
+<p>I&rsquo;ve come to realize that many people in the US especially, are generally pretty good at taking failure on the chin and continuing on. The US has a culture where failure is acceptable, and in a lot of cases, even desired. There are countless stories of people in professional settings who have been rewarded for failing, from the VCs who will only invest in founders who have failed, to the managers who refuse to fire employees that made a big mistake because in their eyes, they just spent $X to train that person and to make sure they won&rsquo;t make the same mistake again.</p>
+
+<p>On a personal note, I can think of many failures of mine, both professionally and personally. But I&rsquo;ve always made an effort to not dwell on those failures as negatives, but instead look at them as positive learning experiences. On the professional side, I spent many years in positions where I wasn&rsquo;t entirely happy, but stayed in those positions for fear of falling behind in the great race to success. I&rsquo;ve also spent time working on multiple projects that ultimately failed for a variety of reasons ranging from inexperience, lack of vision and a desire to make things perfect thereby missing the market entirely. Each of those experiences have taught me many valuable lessons that I will be able to use forever.</p>
+
+<p>In the end, I leave you with this <a href="http://www.whitehouse.gov/MediaResources/PreparedSchoolRemarks">quote by Obama</a>:</p>
+
+<blockquote><p>“You can’t let your failures define you you have to let them teach you. You have to let them show you what to do differently next time”</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learncode: My First Project as a Web Developer]]></title>
+    <link href="http://francisco.github.io/blog/2013/11/10/learncode-my-first-project-as-a-web-developer/"/>
+    <updated>2013-11-10T17:52:46-08:00</updated>
+    <id>http://francisco.github.io/blog/2013/11/10/learncode-my-first-project-as-a-web-developer</id>
+    <content type="html"><![CDATA[<p>With four weeks of GA’s Web Development Immersive under my belt, it came time to embark on my first official Rails project. I knew I wanted to build something that leveraged a publicly accessible API and a map. Fortunately, I stumbled upon <a href="http://code.org">Code.org</a> and their awesome Local School Database API. After some brainstorming, I wanted <a href="http://learncode.herokuapp.com">Learncode</a> to achieve the following:
+&ndash; Inspire visitors to learn to code
+&ndash; Help those visitors find relevant self-study information
+&ndash; Display all the physical schools where one could learn to code</p>
+
+<p>For my MVP, I focused on implementing the following features:
+&ndash; Access Code.org&rsquo;s Local Schools Database
+&ndash; Install Leaflet maps
+&ndash; Add map markers using address-to-Lat/Long conversion with Google Maps
+&ndash; Embed school data in a map marker popup
+&ndash; Add search-by-address functionality to move the map to the entered address
+&ndash; Create an aesthetically pleasing UI</p>
+
+<p>I was able to move quickly with implementing many of the MVP features, but encountered a few challenges that required some creative problem solving and help from my instructors to overcome.</p>
+
+<h3>Challenge 1:</h3>
+
+<p>The Local Schools Database was temporarily down meaning I could not access the JSON schools data with a simple Ajax request.</p>
+
+<p><strong>Solution:</strong> Developed a Nokogiri rake task to scrape a data sample for a handful of cities as a proof of concept for the MVP. With the sample data in my database, I developed a second rake task to convert each school&rsquo;s address to lat/long and stored that in the Database. I later implemented the Rails Geocoder Gem for this.</p>
+
+<h3>Challenge 2:</h3>
+
+<p>Render the map-markers using Javascript to avoid routing the user to a new view after each search.</p>
+
+<p><strong>Solution:</strong> Implemented an Ajax request to pull in the markers from the Database and render them on the page. To do so, I created an API using a respond_to query in my Rails controller. I’ve included the ruby code snippet below.</p>
+
+<p><strong>Ruby on Rails Controller Index Function:</strong></p>
+
+<pre><code>#Select all offline schools from Database and assign to variable
+offline_schools = OfflineSchool.all
+
+#API to render data accesible via an AJAX request
+respond_to do |format|
+  format.html
+  format.json {
+    lat = params[:lat]
+    lng = params[:lng]
+    render json: OfflineSchool.near([lat, lng], 50, :order =&gt; :distance)
+  }
+end
+</code></pre>
+
+<p>After the MVP was complete, I spent time improving the front-end, while implementing a few more controllers and views with relevant content to inspire users to learn code and help them find self-study resources.</p>
+
+<p>Looking back, building my first real website from scratch was an incredibly rewarding experience. I challenged myself to learn new things while leveraging everything I had learned in the previous 4 weeks at General Assembly. But more importantly, I achieved a major life goal of mine (to build a web app on my own) and sparked what I know will be a life-long passion for web development.</p>
+
+<p>Here&rsquo;s a link to my <a href="http://learncode.herokuapp.com">Heroku deploy</a> and the <a href="https://github.com/francisco/codemapsalpha">Github Repo</a>. I&rsquo;ve also included some screenshots of Learncode. I plan to soon release some updates to resolve some of the JavaScript and CSS bugs.</p>
+
+<p><img src="http://francisco.github.io/img/learncode_blog_screen.png" title="Learncode" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[To Fingerprint Or Not]]></title>
+    <link href="http://francisco.github.io/blog/2013/10/28/to-fingerpint-or-not/"/>
+    <updated>2013-10-28T20:14:14-07:00</updated>
+    <id>http://francisco.github.io/blog/2013/10/28/to-fingerpint-or-not</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://ksj.mit.edu/sites/default/files/images/tracker/2010/fingerprint-207x300.jpg">
+In light of Apple recent announcement to include a fingerprint scanner in the iPhone 5s, a lot of discussion has taken place around how secure biometric readers really are. The biggest question detractors ask is, do you really want your password being something that you leave virtually everywhere and you can never change? The logic is hard to deny. In an article by Dustin Kirkland on his blog <a href="http://blog.dustinkirkland.com/2013/10/fingerprints-are-user-names-not.html">From the Canyon Edge</a>, Dustin makes the point that fingerprints should be reserved for usernames only. In his opinion, “Biometrics cannot, and absolutely must not, be used to authenticate an identity.” While it may seem like something form a spy movie, recreating a fingerprint from a picture is easier than it seems, as the <a href="http://www.ccc.de/en/updates/2013/ccc-breaks-apple-touchid">Chaos Computer Club</a> recently proved. The author goes on to say that a passphrase that is independently chosen, changed and rotated is the only true way to maintain security.</p>
+
+<p>The only value Dustin sees in the biometrics scanners is to customize experiences on a device shared by many users. Or in other words, having your fingerprint act as a username.</p>
+
+<p>While most commentors on Dennis’ article agree wholeheartedly that biometric scanning is un-secure, there are a few who bring up valid points in disagreement. For example, one commentor relates this to the locks on your home which require a key which can easily be stolen by someone. Even more, that someone could watch you enter a passcode, or even hold you at gunpoint if they really want something. Another commentor adds that this is more of a convenience factor the majority of people. He states that 50% of iPhone users don’t even use the PIN lock on their phone. The most logical reason being that it’s to inconvenient to type in a passcode every time you want to use your phone.</p>
+
+<p>In my opinion, it’s more important to look at this issue from a relative perspective. In the end, nothing will ever be 100% secure. So we must ask, what is comparatively more secure and convenient enough that people will actually use it. Is it better to have someone not use a passcode, or use a biometric scanner this is super convenient (assuming that it works) and that realistically is not “easy” to hack. I think many of the detractors of using biometric technology are not considering “everyone else” in their analyses. They go so far as to say, “Well, I’m a techie and I wouldn’t use it in the .0001% chance that someone could recreate my fingerprint, so that means no one should use it.” Such blanket statements are dangerous in my opinion and fail to recognize that not everyone is the same and not everyone sees value in NSA level security (or insecurity) to access their stuff.</p>
+]]></content>
+  </entry>
   
 </feed>
