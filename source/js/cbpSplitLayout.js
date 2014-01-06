@@ -47,7 +47,6 @@
 
 		rightSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
 			reset();
-			classie.add( splitlayout, 'open-right' );
 		} );
 
 		// back to intro

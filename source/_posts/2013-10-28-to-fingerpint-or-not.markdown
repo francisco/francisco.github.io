@@ -1,0 +1,15 @@
+---
+layout: post
+title: "To Fingerprint Or Not"
+date: 2013-10-28 20:14:14 -0700
+comments: true
+categories: privacy security apple biometrics
+---
+{% img left http://ksj.mit.edu/sites/default/files/images/tracker/2010/fingerprint-207x300.jpg %}
+In light of Apple recent announcement to include a fingerprint scanner in the iPhone 5s, a lot of discussion has taken place around how secure biometric readers really are. The biggest question detractors ask is, do you really want your password being something that you leave virtually everywhere and you can never change? The logic is hard to deny. In an article by Dustin Kirkland on his blog [From the Canyon Edge](http://blog.dustinkirkland.com/2013/10/fingerprints-are-user-names-not.html), Dustin makes the point that fingerprints should be reserved for usernames only. In his opinion, “Biometrics cannot, and absolutely must not, be used to authenticate an identity.” While it may seem like something form a spy movie, recreating a fingerprint from a picture is easier than it seems, as the [Chaos Computer Club](http://www.ccc.de/en/updates/2013/ccc-breaks-apple-touchid) recently proved. The author goes on to say that a passphrase that is independently chosen, changed and rotated is the only true way to maintain security.
+
+The only value Dustin sees in the biometrics scanners is to customize experiences on a device shared by many users. Or in other words, having your fingerprint act as a username.
+
+While most commentors on Dennis’ article agree wholeheartedly that biometric scanning is un-secure, there are a few who bring up valid points in disagreement. For example, one commentor relates this to the locks on your home which require a key which can easily be stolen by someone. Even more, that someone could watch you enter a passcode, or even hold you at gunpoint if they really want something. Another commentor adds that this is more of a convenience factor the majority of people. He states that 50% of iPhone users don’t even use the PIN lock on their phone. The most logical reason being that it’s to inconvenient to type in a passcode every time you want to use your phone.
+
+In my opinion, it’s more important to look at this issue from a relative perspective. In the end, nothing will ever be 100% secure. So we must ask, what is comparatively more secure and convenient enough that people will actually use it. Is it better to have someone not use a passcode, or use a biometric scanner this is super convenient (assuming that it works) and that realistically is not “easy” to hack. I think many of the detractors of using biometric technology are not considering “everyone else” in their analyses. They go so far as to say, “Well, I’m a techie and I wouldn’t use it in the .0001% chance that someone could recreate my fingerprint, so that means no one should use it.” Such blanket statements are dangerous in my opinion and fail to recognize that not everyone is the same and not everyone sees value in NSA level security (or insecurity) to access their stuff.

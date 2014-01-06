@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Refinery Gem: Content Management in Rails"
+date: 2013-12-03 19:25:41 -0700
+comments: true
+categories: Refinery RoR gems CMS
+---
+In my previous life I was a marketer and website manager. It's safe to say I spent A LOT of time building and updating site content in many different content management systems. Wordpress, Typepad, Drupal, Joomla and others all became good friends of mine, some more than others. Wordpress was always my favorite for many reasons. It's relatively easy to manage and update content, even for non-technical people. There’s a huge community of designers and developers who build templates for Wordpress implementations, not to mention countless plugins that make integrations fairly easy - although admittedly I’ve had plenty of problems with those WP plugins.
+
+As a newly minted developer however, my perception of a CMS has changed significantly. While Wordpress may be great for static content sites with minimal functionality, Wordpress can quickly reach its limitations when it’s asked to manage large data sets or perform complex functions.
+
+It was for these reasons that I was excited to learn about the open source [Refinery CMS gem for Ruby on Rails](http://refinerycms.com/). The platform incorporates the front-end ease of use of Wordpress with the powerful MVC backend of Rails, all bundled up (yes, I’m going there) in a developer friendly gem. In my opinion this makes for a winning combination. There is also a large community supporting Refinery which makes integrations a snap. In fact, here’s a list of some of the [Refinery engines](http://refinerycms.com/engines). And of course there’s the ability to scale a rails app quickly and efficiently, including data integrations, account management, secure payment processing and much more.
+
+A quick google search on Refinery will also brought up a long list of favorable reviews [(here’s one of many)](http://blog.flatironschool.com/post/54511602806/build-a-blog-based-site-with-refinerycms) about Refinery. Other developers who have implemented the Refinery Content Management System claim that it’s fast, reliable and scalable, all wrapped in a easy to use novice-friendly UI. Did I also mention that Refinery is a completely open source project?
+
+All in all, [Refinery](http://refinerycms.com/) is definitely a gem that I’ll consider the next time a CMS type project comes along. If you’re interested, go check out Refinery CMS for yourself.

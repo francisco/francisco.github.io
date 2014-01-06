@@ -228,19 +228,29 @@ ul{
 	padding: 1em;
 }
 
-.page-inner section {
-	padding-bottom: .05em;
+i {
+	margin-right: 10px;
 }
 
 .thumbnail{
 	min-height: 410px;
 }
 
+.social{
+	margin: 0 0 0 3px;
+}
+
 .page-inner h2 {
 	margin: 0 0 0.5em 0;
 	font-weight: 300;
 	font-size: 2.4em;
+	-webkit-margin-before: 0.2em;
+	-webkit-margin-after: 0.2em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
 }
+
+
 .page-inner h3 {
 	margin: 0 0 .2em 0;
 	font-weight: 100;
@@ -250,6 +260,10 @@ ul{
 .page-inner p {
 	font-weight: 300;
 	font-size: 1.2em;
+	-webkit-margin-before: .5em;
+	-webkit-margin-after: .5em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
 }
 
 /* All transitions */
