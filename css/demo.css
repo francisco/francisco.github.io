@@ -211,3 +211,7 @@ a:hover {
 	.codropsheader nav { display: none; }
 }
 
+em{
+	font-size: 13px;
+}
+
