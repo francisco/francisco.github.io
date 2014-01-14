@@ -254,12 +254,21 @@ i {
 .page-inner h3 {
 	margin: 0 0 .2em 0;
 	font-weight: 100;
-	font-size: 1em;
+	font-size: 1.1em;
 }
 
 .page-inner p {
 	font-weight: 300;
+	font-size: 1.1em;
+	-webkit-margin-before: .5em;
+	-webkit-margin-after: .5em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.small{
 	font-size: .8em;
+	font-weight: 300;
 	-webkit-margin-before: .5em;
 	-webkit-margin-after: .5em;
 	-webkit-margin-start: 0px;
