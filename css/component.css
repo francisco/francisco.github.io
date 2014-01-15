@@ -5,6 +5,9 @@ html, body,
 	height: 100%;
 }
 
+.source{
+	font-size: 0.7em;
+}
 body {
 	overflow-y: scroll;
 	background: #333;
