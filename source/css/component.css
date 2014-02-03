@@ -5,6 +5,9 @@ html, body,
 	height: 100%;
 }
 
+.source{
+	font-size: 0.7em;
+}
 body {
 	overflow-y: scroll;
 	background: #333;
@@ -254,12 +257,21 @@ i {
 .page-inner h3 {
 	margin: 0 0 .2em 0;
 	font-weight: 100;
-	font-size: 1.3em;
+	font-size: 1em;
 }
 
 .page-inner p {
 	font-weight: 300;
-	font-size: 1.2em;
+	font-size: 1em;
+	-webkit-margin-before: .5em;
+	-webkit-margin-after: .5em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.small{
+	font-size: .8em;
+	font-weight: 300;
 	-webkit-margin-before: .5em;
 	-webkit-margin-after: .5em;
 	-webkit-margin-start: 0px;
