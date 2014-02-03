@@ -9,7 +9,7 @@
 
 <meta name="author" content="Francisco Alberini"> 
 
-<meta name="description" content="Some wise words from the man behind Linux excerpted from Dreaming in Code by Scott Rosenberg. In June 2004, Linux Times published an interview with &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="In our 3rd-to-last week at General Assembly, we spent an entire week learning about Computer Science basics including sorting algorithms, tree &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -89,6 +89,136 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/02/finding-the-overlap-of-two-rectangles-in-ruby/">
+		
+			Finding the Overlap of Two Rectangles in Ruby</a>
+	</h2>
+	<div class="entry-content">
+		<p>In our 3rd-to-last week at General Assembly, we spent an entire week learning about Computer Science basics including sorting algorithms, tree structures, and how to solve puzzles with code.</p>
+
+<p>In the process of studying this material, I came across the following puzzle: <em>Create a function that prints out the overlap of two rectangles based on two diagonal coordinates of each rectangle.</em></p>
+
+<blockquote><p>Input:</p>
+
+<pre><code>$ square = [[2,3],[9,8],[7,-4],[11,5]]
+$ check_square(square)
+</code></pre>
+
+<p>Expected output:</p>
+
+<pre><code>$ [[7, 3], [9, 5]]
+</code></pre></blockquote>
+
+<p>Or for those who are visually inclined:<br />
+<img class="left" src="/img/overlapping_rectangles.png"></p>
+
+<p>To solve this problem, we need to first check the coordinates provided to ensure that they both represent the bottom left and top right corners of each rectangle. To do so, we check if the x value from the first coordinate (2 in this case) is larger than the x value from the second coordinate (9 in this case). If it&rsquo;s larger, the coordinates represent the top left and bottom right coordinates (not good!) so we need to switch those coordinates. The same goes for the y value of each coordinate.</p>
+
+<p>Once the coordinates are fixed, we call the bound_box() which determines the overlap. To do so, we first find the max x and y values from the bottom left corners of each rectangle. Then we find the min x and y values from the top right corners of each rectangle. The result is the coordinates for the overlap rectangle.</p>
+
+<p>Here&rsquo;s my solution:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def check_square(square)
+</span><span class='line'>  #Ensure coordinates make a rectangle (not a line)
+</span><span class='line'>  if square[0][0] != square[1][0] && square[0][1] != square[1][1]
+</span><span class='line'>
+</span><span class='line'>    #Switch coords if x value from 1st coord is &gt; than x value from 2nd coord
+</span><span class='line'>    if square[0][0] &gt; square[1][0]
+</span><span class='line'>      square[0][0], square[1][0] = square[1][0], square[0][0]
+</span><span class='line'>    end
+</span><span class='line'>
+</span><span class='line'>    #Switch coords if y value from 1st coord is &gt; than y value from 2nd coord
+</span><span class='line'>    if square[0][1] &gt; square[1][1]
+</span><span class='line'>      square[0][1], square[1][1] = square[1][1], square[0][1]
+</span><span class='line'>    end
+</span><span class='line'>
+</span><span class='line'>    bound_box(square)
+</span><span class='line'>
+</span><span class='line'>  else
+</span><span class='line'>    puts "Coordinates do not make a rectangle"
+</span><span class='line'>  end
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>def bound_box(square)
+</span><span class='line'>  #Create two squares for easier traversing of array
+</span><span class='line'>  square_1 = [square[0], square[1]]
+</span><span class='line'>  square_2 = [square[2], square[3]]
+</span><span class='line'>
+</span><span class='line'>  #Return array with max points for bottom left, and min points for top right coordinates
+</span><span class='line'>  [
+</span><span class='line'>    [[square_1[0][0], square_2[0][0]].max, [square_1[0][1], square_2[0][1]].max],
+</span><span class='line'>    [[square_1[1][0], square_2[1][0]].min, [square_1[1][1], square_2[1][1]].min]
+</span><span class='line'>  ]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-02T21:41:58-08:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='/blog/categories/puzzles/'>puzzles</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+</div>
+
+
+	
+</div></article>
 
 
     <article class="post">
