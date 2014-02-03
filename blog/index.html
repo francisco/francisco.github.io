@@ -119,7 +119,7 @@ $ check_square(square)
 
 <p>To solve this problem, we need to first check the coordinates provided to ensure that they both represent the bottom left and top right corners of each rectangle. To do so, we check if the x value from the first coordinate (2 in this case) is larger than the x value from the second coordinate (9 in this case). If it&rsquo;s larger, the coordinates represent the top left and bottom right coordinates (not good!) so we need to switch those coordinates. The same goes for the y value of each coordinate.</p>
 
-<p>Once the coordinates are fixed, we call the bound_box() which determines the overlap. To do so, we first find the max x and y values from the bottom left corners of each rectangle. Then we find the min x and y values from the top right corners of each rectangle. The result is the coordinates for the overlap rectangle.</p>
+<p>Once the coordinates are fixed, we call bound_box() which determines the overlap. To do so, we first find the max x and y values from the bottom left corners of each rectangle. Then we find the min x and y values from the top right corners of each rectangle. The result is the coordinates for the overlap rectangle.</p>
 
 <p>Here&rsquo;s my solution:</p>
 
